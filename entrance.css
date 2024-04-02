@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@100..900&family=Lobster&family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@300&family=Lobster&family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
+:root {
+    --font-header: "Semi-bold";
+    --font-answer: "Pangolin", cursive;
+    --size-header: 20px;
+    --size-answer: 25px;
+    --font-addDescription: "Istok Web", sans-serif;
+    --size-addDescription: 25px;
+    --color-foodname: #F7D8A5;
+    --font-popular-title: font-family: "Literata", serif;
+
+
+}
+
+
+
+
+.head {
+    width: 100%;
+    max-width: 1440px;
+    background-color: #1F3341;
+    height: 50px;
+    grid-area: "head";
+    height: 60px;
+    border-radius: 10px;
+
+}
+
+
+.header-ul li {
+    color: aliceblue;
+    float: left;
+    display: flex;
+    list-style-type: none;
+    display: flex;
+    margin: 0 30px;
+
+}
+
+.head a {
+    color: aliceblue;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+
+}
+
+
+.choosenfood {
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+    text-decoration: none;
+    color: black;
+    display: inline;
+
+}
+
+.choosenetrance {
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.search {
+    width: 537px;
+    height: 20px;
+    border-radius: 50px;
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+
+
+
+}
+
+.login {
+    position: absolute;
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+    text-decoration: none;
+    color: black;
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+
+
+.choosenfood {
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+    text-decoration: none;
+    color: black;
+    display: inline;
+
+}
+
+.choosenetrance {
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.search {
+    width: 537px;
+    height: 20px;
+    border-radius: 50px;
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+
+
+
+}
+
+.login {
+    position: absolute;
+    font-family: var(--font-header);
+    font-size: var(--size-header);
+    text-decoration: none;
+    color: black;
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+button {
+    width: 130px;
+    height: 50px;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #0B0909;
+
+
+
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+.search-food{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.hoolig-shuuh {
+   
+    margin-top: 30px; 
+    text-align: center;  
+    align-items: center;
+    height: 60px;
+    width: 150px;
+    background-color: #3A3131;
+    color: white;
+
+
+}
+
+
+
+.search-ent {
+    width: 600px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 10px;
+   
+
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #1F3341;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+footer h2 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    size: 50px;
+}
+
+
+footer section {
+    color: white;
+}

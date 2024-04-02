@@ -1,86 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 
+   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Хоолондоо онлайн сургалт">
     <title>Хоолондоо</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <div>
-            <a href="index.html"><img src="assets/logo.jpeg" alt="Logo" width="30" height="30"></a>
-            <a href="choosenfood.html" class="choosenfood">Хоол сонгох</a>
-            <a href="choosenentrance.html" class="choosenentrance">Орц сонгох</a>
-            <input type="text" id="search" placeholder="Search">
-            <a href="login.html">Нэвтрэх</a>
-        </div>
+    <header class="head">
+        <ul class="header-ul">
+            <li> <a href="index.html"><img src="assets/logo.jpeg" alt="Logo" class="logo"></a></li>
+            <li> <a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
+            <li> <a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
+            <li> <input type="text" id="search" placeholder="Search" class="search"></li>
+            <li> <a href="login.html" class="login">Нэвтрэх</a></li>
+        </ul>
     </header>
 
     <section class="general">
-        <img src="assets/general.jpeg" alt="General food" width="800" height="200">
-        <p>Та өөрийн дуртай хоолоо хийж сурмаар байна уу?</p>
+        <img src="assets/general.jpeg" alt="General food">
+        <p class="ask">Та өөрийн дуртай хоолоо хийж сурмаар байна уу?</p>
         <div>
-            <p>Тийм</p>
-            <a href="choosenfood.html">Хоол сонгох</a>
-            <a href="choosenentrance.html">Орц сонгох</a>
+            <p class="yes">Тийм</p>
+
+            <a href="choosenfood.html" class="answerfood">Хоол сонгох</a>
+            <a href="choosenentrance.html" class="answerenterance">Орц сонгох</a>
+
         </div>
         <div>
-            <p>Үгүй</p>
+            <p class="no">Үгүй</p>
             <a href="choosenfood.html">Хамгийн амархан хоолийг туршиж үзэх</a>
         </div>
     </section>
 
     <section class="add">
-        <img src="assets/add.jpeg" alt="advertisement" width="200" height="200">
-        <div>
-            <p>Манай сургалтыг та хүссэн үедээ хүссэн газраасаа үзэх боломжтой. Та дуртай хоолоо хийж сурмаар байна уу?
+        <img src="assets/add.jpeg" alt="advertisement" >
+        <div >
+            <p class="addtext">Манай сургалтыг та хүссэн үедээ хүссэн газраасаа үзэх боломжтой. Та дуртай хоолоо хийж сурмаар байна уу?
             </p>
             <button>Дэлгэрэнгүй</button>
         </div>
     </section>
 
-    <section class="most">
+    <div class="container">
         <h2>Хамгийн их хандалттай хоол</h2>
-        <section class="food1">
+        <div class="item1">
+
             <p>Стейк</p>
-            <img src="assets/add.jpeg" alt="Food photo" width="200" height="200">
-        </section>
-        <section class="food1">
+            <img src="assets/food.jpeg" alt="Food photo" >
+            <div class="leaf-icons"> 
+                <icon class="leaf1"></icon>
+                <icon class="leaf2"></icon>
+                <icon class="leaf3"></icon>
+                <icon class="leaf4"></icon>
+                <icon class="leaf5"></icon>
+                <img  src="assets/yummy.jpeg" alt="yummy">
+            </div>
+        </div>
+      
+       
+        <div class="item2">
             <p>Стейк</p>
-            <img src="assets/food.jpeg" alt="Food photo" width="200" height="200">
-        </section>
-        <section class="food1">
+            <img src="assets/food.jpeg" alt="Food photo" >
+           <div class="leaf-icons"> 
+                <icon class="leaf1"></icon>
+                <icon class="leaf2"></icon>
+                <icon class="leaf3"></icon>
+                <icon class="leaf4"></icon>
+                <icon class="leaf5"></icon>
+                <img  src="assets/yummy.jpeg" alt="yummy">
+            </div>
+        </div>
+
+        <div class="item3">
             <p>Стейк</p>
-            <img src="assets/food.jpeg" alt="Food photo" width="200" height="200">
-        </section>
-    </section>
+            <img src="assets/food.jpeg" alt="Food photo" >
+            <div class="leaf-icons"> 
+                <icon class="leaf1"></icon>
+                <icon class="leaf2"></icon>
+                <icon class="leaf3"></icon>
+                <icon class="leaf4"></icon>
+                <icon class="leaf5"></icon>
+                <img  src="assets/yummy.jpeg" alt="yummy">
+            </div>
+        </div>
+        </div>
+
 
     <article class="popular">
-        <img src="assets/special.jpeg" alt="Special food" width="300" height="500">
-        <p>Хөөрхөн хүүхдүүддээ өглөөний цайнд юу бэлдэх вэ гэж үү?</p>
-        <p>Энэхүү өглөөний хоол нь маш тэжээллэг бөгөөл хийхэд хялбар таны өлдрийн шим тэжээлийг нөхөх болно.</p>
+        <img src="assets/special.jpeg" alt="Special food">
+        <div class="popular-p">
+        <p class="title">Хөөрхөн хүүхдүүддээ өглөөний цайнд юу бэлдэх вэ гэж үү?</p>
+        <p class="popular-desc">Энэхүү өглөөний хоол нь маш тэжээллэг бөгөөл хийхэд хялбар таны өдрийн шим тэжээлийг нөхөх болно.</p>
         <p>4 days ago</p>
+
+    </div>
+                <icon class="leaf1"></icon>
+                <icon class="leaf2"></icon>
+                <icon class="leaf3"></icon>
+                <icon class="leaf4"></icon>
+                <icon class="leaf5"></icon>
     </article>
+    <footer>
+        
+        <h2>Хоолондоо</h2>
+        <div class="footer"><section class="footer1">
+            
+            <h3>Холбоо барих</h3>
+            
+            <p><i class="fa-solid fa-phone">  </i> +976 99228817</p>
+            <p><i class="fa-regular fa-envelope"></i> enkhoyun0901@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i>Улаанбаатар хот</p>
+        </section>
+        <section class="footer2">
+            <h3>Тусламж & Мэдээлэл</h3>
+            <p>Түгээмэл асуулт хариулт</p>
+            <p>Зар суртчилгаа</p>
+            <p>Сайтийн тухай</p>
+        </section></div>
+        
+    </footer>
+    
+    </body>
 
 </html>
-<footer>
-    <h2>Хоолондоо</h2>
-    <section>
-        <h3>Холбоо барих</h3>
-        <p>+976 99228817</p>
-        <p>enkhoyun0901@gmail.com</p>
-        <p>Улаанбаатар хот</p>
-    </section>
-    <section>
-        <h3>Тусламж & Мэдээлэл</h3>
-        <p>Түгээмэл асуулт хариулт</p>
-        <p>Зар суртчилгаа</p>
-        <p>Сайтийн тухай</p>
-    </section>
-</footer>
-
-</body>
