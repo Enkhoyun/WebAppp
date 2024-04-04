@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@100..900&family=Lobster&family=Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@300&family=Lobster&family=Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
 :root {
     --font-header: "Semi-bold";
@@ -14,6 +15,7 @@
     --size-addDescription: 25px;
     --color-foodname: #F7D8A5;
     --font-popular-title: font-family: "Literata", serif;
+    --font-head-food:font-family: "Lexend Deca", sans-serif;
 
 
 }
@@ -90,4 +92,15 @@
     text-decoration: none;
     color: black;
 
+}
+article{
+    display: grid;
+    grid-template-columns: auto;
+}
+h3{
+    font-family: var(--font-head-food);
+    font-size:30px;
+}
+img{
+    border-radius: 20px;
 }
