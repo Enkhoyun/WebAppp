@@ -1,106 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@100..900&family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@300&family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
-
-:root {
-    --font-header: "Semi-bold";
-    --font-answer: "Pangolin", cursive;
-    --size-header: 20px;
-    --size-answer: 25px;
-    --font-addDescription: "Istok Web", sans-serif;
-    --size-addDescription: 25px;
-    --color-foodname: #F7D8A5;
-    --font-popular-title: font-family: "Literata", serif;
-    --font-head-food:font-family: "Lexend Deca", sans-serif;
-
-
-}
-
-
-
-
-.head {
-    width: 100%;
-    max-width: 1440px;
-    background-color: #1F3341;
-    height: 50px;
-    grid-area: "head";
-    height: 60px;
-    border-radius: 10px;
-
-}
-
-
-.header-ul li {
-    color: aliceblue;
-    float: left;
-    display: flex;
-    list-style-type: none;
-    display: flex;
-    margin: 0 30px;
-
-}
-
-.head a {
-    color: aliceblue;
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-
-}
-
-
-.choosenfood {
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-    display: inline;
-
-}
-
-.choosenetrance {
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-
-
-}
-
-.search {
-    width: 537px;
-    height: 20px;
-    border-radius: 50px;
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-
-
-
-}
-
-.login {
-    position: absolute;
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+.root{
+    --font-food-name:font-family: "Lexend Zetta", sans-serif;
 }
 article{
-    display: grid;
-    grid-template-columns: auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+.steak{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+section h3{
+ align-self: center;
 }
 h3{
-    font-family: var(--font-head-food);
-    font-size:30px;
+    font-family:var(--font-food-name);
 }
 img{
-    border-radius: 20px;
+    border-radius: 40px;
+    width: 200px;
+    height: 200px;
+}
+.name{
+    border:solid var(--color-foodname);
+    background-color: var(--color-foodname);
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    & p{
+        align-self: center;
+    }
+    & a{
+        color:black;
+        align-self: center;
+    }
+    
+}
+
+
+.leaf-icons {
+    display: flex;
+    flex-direction: row;
+
+    & .reaction {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+.leaf1 {
+
+    position: sticky;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath fill='%2377b255' d='M32.551 18.852c-2.093-1.848-6.686-3.264-10.178-3.84c3.492-.577 8.085-1.993 10.178-3.839c2.014-1.776 2.963-2.948 2.141-4.722c-.566-1.219-2.854-1.333-4.166-2.491C29.214 2.802 29.083.783 27.7.285c-2.01-.726-3.336.114-5.347 1.889c-2.094 1.847-3.698 5.899-4.353 8.98c-.653-3.082-2.258-7.134-4.351-8.981C11.634.397 10.308-.441 8.297.285c-1.383.5-1.512 2.518-2.823 3.675S1.872 5.234 1.308 6.454c-.823 1.774.129 2.943 2.14 4.718c2.094 1.847 6.688 3.263 10.181 3.84c-3.493.577-8.087 1.993-10.181 3.84c-2.013 1.775-2.963 2.945-2.139 4.721c.565 1.219 2.854 1.334 4.166 2.49c1.311 1.158 1.444 3.178 2.827 3.676c2.009.727 3.336-.115 5.348-1.889c1.651-1.457 2.997-4.288 3.814-6.933c-.262 4.535.528 10.591 3.852 14.262c1.344 1.483 2.407.551 2.822.187c.416-.365 1.605-1.414.186-2.822c-3.91-3.883-5.266-7.917-5.628-11.14c.827 2.498 2.107 5.077 3.657 6.446c2.012 1.775 3.339 2.615 5.351 1.889c1.382-.5 1.512-2.52 2.822-3.676c1.312-1.158 3.602-1.273 4.166-2.494c.822-1.774-.13-2.944-2.141-4.717'/%3E%3C/svg%3E");
+}
+
+.leaf2 {
+
+    position: sticky;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath fill='%2377b255' d='M32.551 18.852c-2.093-1.848-6.686-3.264-10.178-3.84c3.492-.577 8.085-1.993 10.178-3.839c2.014-1.776 2.963-2.948 2.141-4.722c-.566-1.219-2.854-1.333-4.166-2.491C29.214 2.802 29.083.783 27.7.285c-2.01-.726-3.336.114-5.347 1.889c-2.094 1.847-3.698 5.899-4.353 8.98c-.653-3.082-2.258-7.134-4.351-8.981C11.634.397 10.308-.441 8.297.285c-1.383.5-1.512 2.518-2.823 3.675S1.872 5.234 1.308 6.454c-.823 1.774.129 2.943 2.14 4.718c2.094 1.847 6.688 3.263 10.181 3.84c-3.493.577-8.087 1.993-10.181 3.84c-2.013 1.775-2.963 2.945-2.139 4.721c.565 1.219 2.854 1.334 4.166 2.49c1.311 1.158 1.444 3.178 2.827 3.676c2.009.727 3.336-.115 5.348-1.889c1.651-1.457 2.997-4.288 3.814-6.933c-.262 4.535.528 10.591 3.852 14.262c1.344 1.483 2.407.551 2.822.187c.416-.365 1.605-1.414.186-2.822c-3.91-3.883-5.266-7.917-5.628-11.14c.827 2.498 2.107 5.077 3.657 6.446c2.012 1.775 3.339 2.615 5.351 1.889c1.382-.5 1.512-2.52 2.822-3.676c1.312-1.158 3.602-1.273 4.166-2.494c.822-1.774-.13-2.944-2.141-4.717'/%3E%3C/svg%3E");
+}
+
+.leaf3 {
+
+    position: sticky;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath fill='%2377b255' d='M32.551 18.852c-2.093-1.848-6.686-3.264-10.178-3.84c3.492-.577 8.085-1.993 10.178-3.839c2.014-1.776 2.963-2.948 2.141-4.722c-.566-1.219-2.854-1.333-4.166-2.491C29.214 2.802 29.083.783 27.7.285c-2.01-.726-3.336.114-5.347 1.889c-2.094 1.847-3.698 5.899-4.353 8.98c-.653-3.082-2.258-7.134-4.351-8.981C11.634.397 10.308-.441 8.297.285c-1.383.5-1.512 2.518-2.823 3.675S1.872 5.234 1.308 6.454c-.823 1.774.129 2.943 2.14 4.718c2.094 1.847 6.688 3.263 10.181 3.84c-3.493.577-8.087 1.993-10.181 3.84c-2.013 1.775-2.963 2.945-2.139 4.721c.565 1.219 2.854 1.334 4.166 2.49c1.311 1.158 1.444 3.178 2.827 3.676c2.009.727 3.336-.115 5.348-1.889c1.651-1.457 2.997-4.288 3.814-6.933c-.262 4.535.528 10.591 3.852 14.262c1.344 1.483 2.407.551 2.822.187c.416-.365 1.605-1.414.186-2.822c-3.91-3.883-5.266-7.917-5.628-11.14c.827 2.498 2.107 5.077 3.657 6.446c2.012 1.775 3.339 2.615 5.351 1.889c1.382-.5 1.512-2.52 2.822-3.676c1.312-1.158 3.602-1.273 4.166-2.494c.822-1.774-.13-2.944-2.141-4.717'/%3E%3C/svg%3E");
+}
+
+.leaf4 {
+
+    position: sticky;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath fill='%2377b255' d='M32.551 18.852c-2.093-1.848-6.686-3.264-10.178-3.84c3.492-.577 8.085-1.993 10.178-3.839c2.014-1.776 2.963-2.948 2.141-4.722c-.566-1.219-2.854-1.333-4.166-2.491C29.214 2.802 29.083.783 27.7.285c-2.01-.726-3.336.114-5.347 1.889c-2.094 1.847-3.698 5.899-4.353 8.98c-.653-3.082-2.258-7.134-4.351-8.981C11.634.397 10.308-.441 8.297.285c-1.383.5-1.512 2.518-2.823 3.675S1.872 5.234 1.308 6.454c-.823 1.774.129 2.943 2.14 4.718c2.094 1.847 6.688 3.263 10.181 3.84c-3.493.577-8.087 1.993-10.181 3.84c-2.013 1.775-2.963 2.945-2.139 4.721c.565 1.219 2.854 1.334 4.166 2.49c1.311 1.158 1.444 3.178 2.827 3.676c2.009.727 3.336-.115 5.348-1.889c1.651-1.457 2.997-4.288 3.814-6.933c-.262 4.535.528 10.591 3.852 14.262c1.344 1.483 2.407.551 2.822.187c.416-.365 1.605-1.414.186-2.822c-3.91-3.883-5.266-7.917-5.628-11.14c.827 2.498 2.107 5.077 3.657 6.446c2.012 1.775 3.339 2.615 5.351 1.889c1.382-.5 1.512-2.52 2.822-3.676c1.312-1.158 3.602-1.273 4.166-2.494c.822-1.774-.13-2.944-2.141-4.717'/%3E%3C/svg%3E");
+}
+
+.leaf5 {
+
+    position: sticky;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath fill='%2377b255' d='M32.551 18.852c-2.093-1.848-6.686-3.264-10.178-3.84c3.492-.577 8.085-1.993 10.178-3.839c2.014-1.776 2.963-2.948 2.141-4.722c-.566-1.219-2.854-1.333-4.166-2.491C29.214 2.802 29.083.783 27.7.285c-2.01-.726-3.336.114-5.347 1.889c-2.094 1.847-3.698 5.899-4.353 8.98c-.653-3.082-2.258-7.134-4.351-8.981C11.634.397 10.308-.441 8.297.285c-1.383.5-1.512 2.518-2.823 3.675S1.872 5.234 1.308 6.454c-.823 1.774.129 2.943 2.14 4.718c2.094 1.847 6.688 3.263 10.181 3.84c-3.493.577-8.087 1.993-10.181 3.84c-2.013 1.775-2.963 2.945-2.139 4.721c.565 1.219 2.854 1.334 4.166 2.49c1.311 1.158 1.444 3.178 2.827 3.676c2.009.727 3.336-.115 5.348-1.889c1.651-1.457 2.997-4.288 3.814-6.933c-.262 4.535.528 10.591 3.852 14.262c1.344 1.483 2.407.551 2.822.187c.416-.365 1.605-1.414.186-2.822c-3.91-3.883-5.266-7.917-5.628-11.14c.827 2.498 2.107 5.077 3.657 6.446c2.012 1.775 3.339 2.615 5.351 1.889c1.382-.5 1.512-2.52 2.822-3.676c1.312-1.158 3.602-1.273 4.166-2.494c.822-1.774-.13-2.944-2.141-4.717'/%3E%3C/svg%3E");
+    margin-right: 40px;
+}
+
+
+
+
+.title {
+    position: static;
+    flex: right;
+    font-family: var(--font-popular-title);
+    font-size: 30px;
+    color: #918C8C;
 }

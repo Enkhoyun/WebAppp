@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Хоолондоо онлайн сургалт">
     <title>Хоолондоо</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="recipe.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
-    <header>
-        <div>
-            <a href="index.html"><img src="assets/logo.jpeg" alt="Хоолондоо лого" width="30" height="30"></a>
-            <a href="choosenfood.html" class="choosenfood">Хоол сонгох</a>
-            <a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a>
-            <input type="text" id="search" placeholder="Хайх">
-            <a href="login.html">Нэвтрэх</a>
-        </div>
-    </header>
 
+
+    <header class="head">
+        
+            
+            <ul class="navigation">
+            <li> <a href="index.html"><img src="assets/logo.jpeg" alt="Logo" class="logo"></a></li>
+            <li> <a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
+            <li> <a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
+            <li class="search-bar"> <input type="text" id="search" placeholder="Search" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i></li>
+            <li> <a href="login.html" class="login" ><i class="fa-solid fa-user"></i>Нэвтрэх</a></li>
+        </ul>
+     
+  
+</header>
+<main>
+    <div class="food-name"></div>
     <h1>Амтат банш</h1>
+    <div class="leaf-icons">
+        <icon class="leaf1"></icon>
+        <icon class="leaf2"></icon>
+        <icon class="leaf3"></icon>
+        <icon class="leaf4"></icon>
+        <icon class="leaf5"></icon>
+       
+    </div>
+    </div>
+
     <section>
-        <img src="assets/chef.jpeg" alt="Шефийн зураг">
-        <p>Энх-Оюун Хүрэлсүх</p>
+        <div class="review">
+        <img class="profile" src="assets/chef.jpeg" alt="Шефийн зураг">
+        <p >Энх-Оюун Хүрэлсүх</p>
+        
         <p>2024.04.23</p>
+    </div>
+
+
         <p>"This is a Rachel Ray recipe I had in my file for quite awhile, and had to try it recently to satisfy a
             craving. It turned out really well. I used made from scratch biscuit recipe as I couldn't locate the jiffy
             mix in my area, I made about 6 biscuits. Also, I think the refrigerated biscuits would work as well.
             Otherwise I followed the recipe pretty much exactly."</p>
-        <img src="assets/authorfood.jpeg" alt="Хоолны зураг">
+        <img class="chef-food" src="assets/authorfood.jpeg" alt="Хоолны зураг">
+        <div class="information">
         <p><i>бэлэн болох:35 мин</i></p>
         <p>Орц:12</p>
         <p><i>Порц</i></p>
         <input type="number" id="porsh" placeholder="Порц">
         <button>- Жижигтэй</button>
         <button>+ Ихтэй</button>
+    </div>
     </section>
     <br>
     
-    <div>
+    <div class="column-2">
+        <div class="zaavar"></div>
         <h3>Заавар</h3>
+        
         <p>
             1. Саладны навчаа угаагаад, сайтар сэгсэрч хатаан гараар эсвэл хутгаар жижиглэн, саванд хийнэ. 2. Ногоон
             сонгино, парсли (яншуйгаар орлуулж болно), өргөст хэмх, сирээ (дурын сир) хэрчиж, салат навч дээрээ
@@ -48,21 +80,34 @@
             жимс, ногоо гэрт тань байхгүй бол байгаагаараа орлуулаад, салад амтлагчаараа амтлаад хийж болно. Хамгийн
             гол нь чихэрлэг болон исгэлэн амтыг тэнцвэржүүлэх хэрэгтэй
         </p>
-    </div>
-    <div>
+        
+
+    <div class="orts">
         <h3>Орц</h3>
         <p>Салад навч – 100 гр Ногоон сонгино Парсли  Өргөст хэмх – 1 ш Бяслаг – 50 гр Хушга (сонголтоор) – ¼
             аяга Үзэм - ¼ аяга
             Мандарин – 1 ш Оливын тос – 1 х.х Балзамик венигэр – 1 х.х Давс, перц амтлахаар Нунтаг сармис – ¼
             ц.х Базилик - ¼ ц.х Сахар – 1 ц.х Бүхэл үрийн гич – 1/2 ц.х</p>
     </div>
+</div>
  
     <br>
     <section>
         <h3>Асуулт Сэтгэгдэл</h3>
-        <input type="text" id="comment" placeholder="Сэтгэгдэл">
+        <div class="comment">
+        <img src="assets/star.png" alt="zurag">
+        <input type="text" id="comment" placeholder="Сэтгэгдэл бичих">
         <button>Нэвтрэх</button>
-        <div>
+    
+        <section>
+        </div>
+        <div class="user-comment">
+            <img src="assets/star.png" >
+            <icon class="leaf1"></icon>
+            <icon class="leaf2"></icon>
+            <icon class="leaf3"></icon>
+            <icon class="leaf4"></icon>
+            <icon class="leaf5"></icon>
 
 
             <p>Гайхалтай гоё амттай болсон гэхдээ илүү час хийсэн амттай болгохыг хүслээ мөн болох хугацааг илүү
@@ -71,24 +116,38 @@
             <p>Reply</p>
 
         </div>
-        <section>
-            <p>Гайхалтай гоё амттай болсон гэхдээ илүү час хийсэн амттай болгохыг хүслээ мөн болох хугацааг илүү
-                уртасгавал илүү зөөлөн амттай болж байна <i>Дэлгэрэнгүй</i></p>
-            <p>Энх-Оюун</p>
-            <p>Reply</p>
+    </div>
+    <div class="user-comment">
+        <img src="assets/star.png" >
+        <icon class="leaf1"></icon>
+        <icon class="leaf2"></icon>
+        <icon class="leaf3"></icon>
+        <icon class="leaf4"></icon>
+        <icon class="leaf5"></icon>
+
+
+        <p>Гайхалтай гоё амттай болсон гэхдээ илүү час хийсэн амттай болгохыг хүслээ мөн болох хугацааг илүү
+            уртасгавал илүү зөөлөн амттай болж байна <i>Дэлгэрэнгүй</i></p>
+        <p>Энх-Оюун</p>
+        <p>Reply</p>
+
+    </div>
 
         </section>
     </section>
-    <section>
+    <section class="author">
         <h3><b>Зохиогч</b></h3>
+        <div class="photo">
         <img src="assets/chef.jpeg" alt="chef">
         <p> 5 дагагч</p>
         <p>5 жор</p>
+    </div>
         <p>Хүрэлсүх Энх-Оюун</p>
         <a href="author.html"><i>Нүүр хуудсыг үзэх</i></a>
     </section>
 
 </body>
+</main>
 <footer>
     <h2>Хоолондоо</h2>
     <section>

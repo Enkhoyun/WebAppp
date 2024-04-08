@@ -1,180 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@100..900&family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@300&family=Lobster&family=Pangolin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 
-:root {
-    --font-header: "Semi-bold";
-    --font-answer: "Pangolin", cursive;
-    --size-header: 20px;
-    --size-answer: 25px;
-    --font-addDescription: "Istok Web", sans-serif;
-    --size-addDescription: 25px;
-    --color-foodname: #F7D8A5;
-    --font-popular-title: font-family: "Literata", serif;
-
+/*body*/
+.generals {
+    height: 800px;
+    background-image: url(assets/generalblur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
 
 }
 
-
-
-
-.head {
-    width: 100%;
-    max-width: 1440px;
-    background-color: #1F3341;
-    height: 50px;
-    grid-area: "head";
-    height: 60px;
+.log {
+    height: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    border: solid white;
     border-radius: 10px;
-    & .a {
-        color: aliceblue;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    background-color: rgba(255, 255, 255, 90%);
+    top: 0;
+    left: 40%;
+}
+
+.log h2 {
+    font-family: "Inter", sans-serif;
+    align-self: center;
+}
+
+.owner {
+    align-self: center;
+}
+
+.loginn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px;
+
+    & input {
+        height: 45px;
+        width: 370px;
+        background-color: gainsboro;
+        border: none;
+        border-radius: 20px;
+        &::placeholder{
+            padding-left: 10px;
+        }
+    
+    }
+
+    & button {
+        height: 45px;
+        width: 370px;
+        background-color: rgb(35, 50, 64);
+        border: none;
+        margin-top: 10px;
+        color: white;
+        border-radius: 20px;
+
     }
 }
 
-
-.header-ul li {
-    color: aliceblue;
-    float: left;
-    display: flex;
-    list-style-type: none;
-    display: flex;
-    margin: 0 30px;
-
+.easy {
+    align-self: center;
+    margin:30px;
 }
 
-
-.logo {
-    width: 40px;
-    height: 40px;
-
-}
-
-
-.choosenfood {
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-    display: inline;
-
-}
-
-.choosenetrance {
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-
-
-}
-
-.search {
-    width: 537px;
-    height: 20px;
-    border-radius: 50px;
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-
-
-
-}
-
-.login {
-    position: absolute;
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-
-}
-
-body {
-    display: grid;
-    grid-template-columns: auto;
-}
-
-
-
-
-.choosenfood {
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-    display: inline;
-
-}
-
-.choosenetrance {
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-
-
-}
-
-.search {
-    width: 537px;
-    height: 20px;
-    border-radius: 50px;
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-
-
-
-}
-
-.login {
-    position: absolute;
-    font-family: var(--font-header);
-    font-size: var(--size-header);
-    text-decoration: none;
-    color: black;
-    
-
-}
-.log{
-    border:solid white;
-    background-color: rgb(255, 255, 255);
-    height: 800px;
-    width:400px;
-    z-index: 3;
-    top:0;
-    left:40%;
-}
-.foodPhoto{
-    width:1400px;
-    height:800px;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-
-}
-
-footer{
-    background-color: #1F3341;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-
-}
-
-footer h2 {
-    width: 100%;
-    text-align: center;
-    color: white;
-    size: 50px;
-}
-
-
-footer section {
-    color: white;
-}
