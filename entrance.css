@@ -1,31 +1,37 @@
-
-
 .main {
     display: flex;
     flex-direction: column;
     grid-area: main;
-
+    width: 100%;
 }
+ .wrapper{
+    width:100%;
+
+} 
 
 button {
-    width: 160px;
     height: 35px;
-    min-width: 100px;
-    gap:30px;
+    gap: 30px;
+    min-width: 5rem;
     color: aliceblue;
     text-align: center;
     border-radius: 20px;
     background-color: #3b3232;
-    margin-right: 2px;;
+    margin-right: 2px;
 
 
 
 }
-.entrance-meat{
+
+.entrance-meat {
     display: flex;
     flex-direction: row;
-    & img{
-        width:25px;
+    margin: 1rem 10px 1rem 10px;
+    width:100%;
+    max-width: 1220px;
+
+    & img {
+        width: 25px;
         height: 25px;
     }
 }
@@ -33,23 +39,33 @@ button {
 .flex-col {
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 2rem;
 }
-.flex-row::webkit ::-webkit-scrollbar{
-    width:0;
+
+.flex-row::-webkit-scrollbar {
+    display: none;
 }
 
 .flex-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    display: flex;
     gap: 20px;
     overflow-x: auto;
+    width: 100%;
+    max-width: 1260px;
 
+    & button {
+        min-width: 160px;
+    }
+
+}
+
+.flex-row::-webkit-scrollbar {
+    display: none
 }
 
 
 
-.search-food{
+.search-food {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -59,23 +75,35 @@ button {
 
 
 .search-ent {
-    width: 600px;
+    width: 200px;
     height: 30px;
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
-   
+
 
 }
+
 .hoolig-shuuh {
-   
-    margin-top: 30px; 
-    text-align: center;  
+
+    margin-top: 30px;
+    text-align: center;
     align-items: center;
     height: 60px;
     width: 150px;
     background-color: #3A3131;
     color: white;
 
+
+}
+
+@media (max-width:768px) {
+    .main {
+        max-width: 768px;
+
+    }
+    .wrapper{
+        width: 768px;
+    }
 
 }

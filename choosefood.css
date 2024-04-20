@@ -5,30 +5,44 @@
 article{
    display: flex;
    flex-direction: row;
-   justify-content: space-evenly;
+  justify-content: center;
+  gap:1rem;
 }
 .steak{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:10px;
+    gap:0.5rem;
 }
 
 section{
     display: flex;
     flex-direction: column;
-}
-section h3{
+
+& h3{
+    margin-top: 1rem;
+ margin-bottom:1rem ;
  align-self: center;
+ font-family:var(--font-food-name);
 }
-h3{
-    font-family:var(--font-food-name);
+ 
 }
-img{
+.steak img {
     border-radius: 40px;
-    width: 200px;
+    width: 100%;
     height: 200px;
+    transition: all 0.25s ease;
 }
+
+.steak img:hover {
+    transform: scale(1.05);
+}
+.media{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
 .name{
     border:solid var(--color-foodname);
     background-color: var(--color-foodname);
@@ -123,4 +137,21 @@ img{
     font-family: var(--font-popular-title);
     font-size: 30px;
     color: #918C8C;
+}
+@media (max-width:480px) {
+    article{
+       flex-direction: column;
+       align-items: center;
+        & .steak{
+            max-width: 400px;
+
+           
+        }
+    }
+    
+}
+@media (max-width:768px) {
+    .head li a{
+        font-size: 15px;
+    }
 }

@@ -24,9 +24,11 @@ body {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: "head" "main" "footer";
+    font-family: "Roboto", sans-serif;
+    width: 100%;
     max-width: 1440px;
     min-width: 375px;
-    margin: 0;
+    margin: 0 auto;
 
 }
 
@@ -44,16 +46,15 @@ a {
 
 /*header section*/
 .head {
-    width:100%;
-    max-width: 1440px;
+    
     grid-area: head;
     margin: 0;
-    
 
     & .navigation {
        
         display: flex;
         flex-direction: row;
+        gap: 60px;
         list-style: none;
         justify-content:space-evenly ;
         font-size: 20px;
@@ -61,7 +62,7 @@ a {
 
         & .fa-user{
             font-size: 20px;
-            /* padding-right: 5px; */
+            padding-right: 5px;
         }
 
     & img{
@@ -77,8 +78,7 @@ a {
     position: relative;
 }
 .search{
-    width:100%;
-    max-width: 280px;
+    width:280px;
     height:25px;
     border:1px solid black;
     border-radius: 20px;
