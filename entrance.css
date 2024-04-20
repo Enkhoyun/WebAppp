@@ -1,109 +1,99 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    grid-area: main;
-    width: 100%;
+body {
+  width: 100%;
 }
- .wrapper{
-    width:100%;
-
-} 
 
 button {
-    height: 35px;
-    gap: 30px;
-    min-width: 5rem;
-    color: aliceblue;
-    text-align: center;
-    border-radius: 20px;
-    background-color: #3b3232;
-    margin-right: 2px;
+  height: 35px;
+  gap: 30px;
+  min-width: 5rem;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #3b3232;
+  margin-right: 2px;
+}
 
-
-
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .entrance-meat {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 10px 1rem 10px;
-    width:100%;
-    max-width: 1220px;
-
-    & img {
-        width: 25px;
-        height: 25px;
-    }
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 10px 1rem 10px;
+  width: auto;
+  & img {
+    width: 20px; /* Adjust image width for better scaling */
+    height: 20px;
+  }
 }
 
 .flex-col {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: auto;
 }
 
 .flex-row::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .flex-row {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    width: 100%;
-    max-width: 1260px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
 
-    & button {
-        min-width: 160px;
-    }
-
+  & button {
+    min-width: 120px; /* Adjust button width for better appearance */
+    padding: 5px 10px; /* Add padding for touch interaction */
+    font-size: 0.9rem; /* Adjust font size for better readability */
+  }
 }
 
 .flex-row::-webkit-scrollbar {
-    display: none
+  display: none;
 }
-
-
 
 .search-food {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-
-
 .search-ent {
-    width: 200px;
-    height: 30px;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-
-
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .hoolig-shuuh {
-
-    margin-top: 30px;
-    text-align: center;
-    align-items: center;
-    height: 60px;
-    width: 150px;
-    background-color: #3A3131;
-    color: white;
-
-
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+  height: 60px;
+  width: 150px;
+  background-color: #3a3131;
+  color: white;
 }
 
-@media (max-width:768px) {
-    .main {
-        max-width: 768px;
-
-    }
-    .wrapper{
-        width: 768px;
-    }
-
+@media (max-width: 768px) {
+  main {
+    padding: 0 20px;
+  }
+  .wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-row {
+    align-self: center;
+  }
+  .entrance-meat {
+    margin: 1rem 5px;
+  }
 }
