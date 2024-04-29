@@ -25,7 +25,8 @@
         <li> <a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
         <li> <a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
         <li class="search-bar"> <input type="text" id="search" placeholder="Search" class="search">
-            <i class="fa-solid fa-magnifying-glass"></i></li>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        <button id="search-btn">Хайх</button></li>
         <li> <a href="login.html" class="login" ><i class="fa-solid fa-user"></i><p>Нэвтрэх</p></a></li>
     </ul>
  
@@ -63,55 +64,13 @@
 
             <h2>Хамгийн их хандалттай хоол</h2>
             <div class="items">
-            <div class="item">
+            
 
-                <p class="name">Стейк</p>
-                <img src="assets/food.jpeg" alt="Food photo">
-                <div class="leaf-icons">
-                    <icon class="leaf1"></icon>
-                    <icon class="leaf2"></icon>
-                    <icon class="leaf3"></icon>
-                    <icon class="leaf4"></icon>
-                    <icon class="leaf5"></icon>
-                    <div class="reaction">
-                        <p>&#128523</p>
-                        <p>20</p>
-                    </div>
-                </div>
-            </div>
+            <food-preview food_id="1"></food-preview>
+            <food-preview food_id="2"></food-preview>
+            <food-preview food_id="3"></food-preview>
+            <food-preview></food-preview>
 
-
-            <div class="item">
-                <p class="name">Стейк </p>
-                <img src="assets/food.jpeg" alt="Food photo">
-                <div class="leaf-icons">
-                    <icon class="leaf1"></icon>
-                    <icon class="leaf2"></icon>
-                    <icon class="leaf3"></icon>
-                    <icon class="leaf4"></icon>
-                    <icon class="leaf5"></icon>
-                    <div class="reaction">
-                        <p>&#128523</p>
-                        <p>20</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <p class="name">Стейк</p>
-                <img src="assets/food.jpeg" alt="Food photo">
-                <div class="leaf-icons">
-                    <icon class="leaf1"></icon>
-                    <icon class="leaf2"></icon>
-                    <icon class="leaf3"></icon>
-                    <icon class="leaf4"></icon>
-                    <icon class="leaf5"></icon>
-                    <div class="reaction">
-                        <p>&#128523</p>
-                        <p>20</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -160,7 +119,7 @@
         </div>
 
     </footer>
-
+<script type="module" src="/components/food-preview.js" ></script>
 </body>
 
 </html>
