@@ -2,60 +2,61 @@ body {
   width: 100%;
 }
 
-button {
-  height: 35px;
-  gap: 30px;
-  min-width: 5rem;
-  color: aliceblue;
-  text-align: center;
-  border-radius: 20px;
-  background-color: #3b3232;
-  margin-right: 2px;
-}
-
-.wrapper {
+.container {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  max-width: 200px;
+  width: 200px;
+  left: 0;
 }
 
-.entrance-meat {
+.column {
+  width: 150px;
+  position: relative;
+  border-radius: 10px;
+  transition: 0.2s;
+  align-items: center;
+  display: flex; /* Add this to use flexbox */
+  flex-direction: column; /* Align items vertically */
+}
+
+.column .options {
+  gap: 100px;
+}
+
+.entranceName {
   display: flex;
   flex-direction: row;
-  margin: 1rem 10px 1rem 10px;
-  width: auto;
-  & img {
-    width: 20px; /* Adjust image width for better scaling */
-    height: 20px;
-  }
+  gap: 0.2rem;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: auto;
+.entranceName img {
+  width: 20px;
 }
 
-.flex-row::-webkit-scrollbar {
+/* Add this style to hide the options initially */
+.options {
   display: none;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
-
-  & button {
-    min-width: 120px; /* Adjust button width for better appearance */
-    padding: 5px 10px; /* Add padding for touch interaction */
-    font-size: 0.9rem; /* Adjust font size for better readability */
-  }
+/* Add this style to display options when active class is present */
+.options.active {
+  display: block;
 }
 
-.flex-row::-webkit-scrollbar {
-  display: none;
+.entranceName label {
+  display: flex;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  font-size: 22px;
+  width: 100px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none; /* Remove list point */
 }
 
 .search-food {
@@ -85,15 +86,5 @@ button {
 @media (max-width: 768px) {
   main {
     padding: 0 20px;
-  }
-  .wrapper {
-    align-items: center;
-    justify-content: center;
-  }
-  .flex-row {
-    align-self: center;
-  }
-  .entrance-meat {
-    margin: 1rem 5px;
   }
 }
