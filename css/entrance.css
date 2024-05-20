@@ -15,8 +15,8 @@ body {
   border-radius: 10px;
   transition: 0.2s;
   align-items: center;
-  display: flex; /* Add this to use flexbox */
-  flex-direction: column; /* Align items vertically */
+  display: flex; 
+  flex-direction: column; 
 }
 
 .column .options {
@@ -33,12 +33,10 @@ body {
   width: 20px;
 }
 
-/* Add this style to hide the options initially */
 .options {
   display: none;
 }
 
-/* Add this style to display options when active class is present */
 .options.active {
   display: block;
 }
@@ -56,7 +54,7 @@ body {
 }
 
 ul {
-  list-style: none; /* Remove list point */
+  list-style: none; 
 }
 
 .search-food {
@@ -82,9 +80,30 @@ ul {
   background-color: #3a3131;
   color: white;
 }
+.save-element-hidden {
+  display: none;
+}
+
+.save-element-visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: calc(100% - 500px);
+  width: 500px;
+  background-color: #453E3B;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+.save-element-visible .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 @media (max-width: 768px) {
   main {
     padding: 0 20px;
   }
 }
+

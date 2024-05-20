@@ -7,50 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Хоолондоо онлайн сургалт">
     <title>Хоолондоо</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="module" src="/components/my-like.js"></script>
+    <script type="module" src="/components/save.js"></script>
+    <script type="module" src="/js/header&footer.js">
+
+    </script>
 </head>
-
 <body>
+    <my-header></my-header>
+        
 
-    <header class="head">
-        <ul class="navigation">
-            <li><a href="index.html"><img src="assets/logo.jpeg" alt="Logo" class="logo"></a></li>
-            <li><a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
-            <li><a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
-            <li class="search-bar">
-                <input type="text" id="search" placeholder="Search" class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <button id="search-btn">Хайх</button>
-            </li>
-            <li><a href="login.html" class="login"><i class="fa-solid fa-user"></i><p>Нэвтрэх</p></a></li>
-        </ul>
-    </header>
 
-</header>
     <main>
         <section class="general">
             <p class="ask">Та өөрийн дуртай хоолоо хийж сурмаар байна уу?</p>
             <div class="yesorno">
                 <a class="yes">Тийм   <i class="fa-solid fa-angle-down"></i></a>
                     <div class="yeshover">
-                        <a href="choosenfood.html">Хоол сонгох</a>
-                        <a href="choosenentrance.html">Орц сонгох</a>
+                        <a href="/html/choosenfood.html">Хоол сонгох</a>
+                        <a href="/html/choosenentrance.html">Орц сонгох</a>
                     </div>
 
 
             </div>
             <div class="yesorno">
                 <a class="no">Үгүй   <i class="fa-solid fa-angle-down"></i></a>
-                    <a href="choosenfood.html" class="no-answer">Хамгийн амархан хоолийг туршиж үзэх </a>
+                    <a href="/html/choosenfood.html" class="no-answer">Хамгийн амархан хоолийг туршиж үзэх </a>
             </div>
         </section>
 
         <section class="add">
-            <img src="assets/add.jpeg" alt="advertisement">
+            <img src="/assets/add.jpeg" alt="advertisement">
             <div class="adddesc">
                 <p class="addtext">Манай сургалтыг та хүссэн үедээ хүссэн газраасаа үзэх боломжтой. Та дуртай хоолоо
                     хийж сурмаар байна уу?
@@ -75,7 +65,7 @@
 
 
         <article class="popular">
-            <img src="assets/special.jpeg" alt="Special food">
+            <img src="/assets/special.jpeg" alt="Special food">
             <div class="popular-p">
                 <p class="title">Хөөрхөн хүүхдүүддээ өглөөний цайнд юу бэлдэх вэ гэж үү?</p>
                 <p class="popular-desc">Өглөөний цай ууснаар “ходоод” дүүрэн байх мэдрэмж удаан хугацааны туршид байснаар хоногийн хоолноос авах илчлэгийн хэмжээ багасаж, “жин” нэмэгдэхгүй, сайн хянаж чадна. Мөн ажлын бүтээмж өндөр байж, анхаарал төвлөрөлт, шинэ юм хүлээж авах чадвар илүү өндөр байдаг.
@@ -85,14 +75,7 @@
                     Өглөөний цайгаа уусан хүн таргалалтанд илүү бага өртдөг гэсэн судалгааны дүн гарчээ. Өглөөний цайг гурван сарын хугацаанд тогтмол ууснаар энэ хугацаанд идэж байсан нийт хоолны хэмжээ 8 кг орчим хасагдсаны дотор оройн хоолны хэмжээ 3,300 гр-аар хасагдсан. Эндээс биеийн жинг хянах, бууруулахад өглөөний цай их ач холбогдолтой.</p>
                     <div class="days">
                     <p>4 days ago</p>
-
-                <div class="leaf-icons">
-                <icon class="leaf1"></icon>
-                <icon class="leaf2"></icon>
-                <icon class="leaf3"></icon>
-                <icon class="leaf4"></icon>
-                <icon class="leaf5"></icon>
-        </div>
+                    <my-like count="3"></my-like>
     </div>
         </div>
         </article>

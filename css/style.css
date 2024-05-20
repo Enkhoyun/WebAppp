@@ -7,7 +7,7 @@
     max-width: 1440px;
     height: 100vh;
     border-radius: 50px;
-    background-image: url(assets/general.jpeg);
+    background-image: url(/assets/general.jpeg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -316,4 +316,3 @@ button {
     }
 }
 
-/* Additional media queries as needed */

@@ -1,3 +1,4 @@
+
 class FoodPreview extends window.HTMLElement {
 
     constructor () {
@@ -45,21 +46,13 @@ class FoodPreview extends window.HTMLElement {
             }
         </style>
         <div class="item">
-        <a href="foodrecipe.html">
+        <a href="foodrecipe.html?id=${food.food_id}">
                 <p class="name">${food.food_name}</p>
                 <img src=${food.image_url} alt="Food photo">
-                <div class="leaf-icons">
-                    <icon class="leaf1"></icon>
-                    <icon class="leaf2"></icon>
-                    <icon class="leaf3"></icon>
-                    <icon class="leaf4"></icon>
-                    <icon class="leaf5"></icon>
-                    <div class="reaction">
-                        <p>&#128523</p>
-                        <p>20</p>
-                    </div>
-                </div>
+                <my-like count="36">
                 </a>
+                <my-save f_id=${food.food_id}></my-save>
+
             </div>
         `
     }

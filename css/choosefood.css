@@ -1,32 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
-.root{
-    --font-food-name:font-family: "Lexend Zetta", sans-serif;
+
+.root {
+    --font-food-name: font-family: "Lexend Zetta", sans-serif;
 }
-article{
-   display: flex;
-   flex-direction: row;
-  justify-content: center;
-  gap:1rem;
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
 }
-.steak{
+
+.steak {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:0.5rem;
+    gap: 0.5rem;
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
 
-& h3{
-    margin-top: 1rem;
- margin-bottom:1rem ;
- align-self: center;
- font-family:var(--font-food-name);
+    & h3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        align-self: center;
+        font-family: var(--font-food-name);
+    }
+
 }
- 
-}
+
 .steak img {
     border-radius: 40px;
     width: 100%;
@@ -37,27 +41,30 @@ section{
 .steak img:hover {
     transform: scale(1.05);
 }
-.media{
+
+.media {
     display: flex;
     flex-direction: row;
-    gap:1rem;
+    gap: 1rem;
 }
 
-.name{
-    border:solid var(--color-foodname);
+.name {
+    border: solid var(--color-foodname);
     background-color: var(--color-foodname);
     height: 40px;
     border-radius: 40px;
     display: flex;
     justify-content: center;
-    & p{
+
+    & p {
         align-self: center;
     }
-    & a{
-        color:black;
+
+    & a {
+        color: black;
         align-self: center;
     }
-    
+
 }
 
 
@@ -138,20 +145,23 @@ section{
     font-size: 30px;
     color: #918C8C;
 }
+
 @media (max-width:480px) {
-    article{
-       flex-direction: column;
-       align-items: center;
-        & .steak{
+    article {
+        flex-direction: column;
+        align-items: center;
+
+        & .steak {
             max-width: 400px;
 
-           
+
         }
     }
-    
+
 }
+
 @media (max-width:768px) {
-    .head li a{
+    .head li a {
         font-size: 15px;
     }
 }
