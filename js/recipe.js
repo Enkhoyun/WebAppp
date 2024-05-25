@@ -1,38 +1,41 @@
-const params = new URLSearchParams(document.location.search);
-const id = params.get("id");
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(document.location.search);
+    const id = params.get("id");
 
-class RecipeFood {
-    async Init() {
-        try {
-            const rs = await fetch("/food.json")
-            const response = await rs.json();
-            const foods = response.foods;
-            const foodRecipeCount = response.foods[0].food_recipe.length;
+    class RecipeFood {
+        async Init() {
+            try {
+                const rs = await fetch("/food.json");
+                const response = await rs.json();
+                const foods = response.foods;
+                const selectedFood = foods.find(item => item.food_id == id);
 
-            
+                if (selectedFood) {
+                    document.getElementById("food-name").innerText = selectedFood.food_name;
+                    document.getElementById("chef-food").src = selectedFood.image_url;
+                    document.getElementById("time").innerText = `${selectedFood.time} мин`;
 
-            const selectedFood = foods.find(item => item.food_id == id);
+                    let ingredientsHtml = "";
+                    selectedFood.food_recipe.forEach(ingredient => {
+                        ingredientsHtml += `<li>${ingredient}</li>`;
+                    });
+                    document.getElementById("recipe").innerHTML = ingredientsHtml;
 
-
-            document.getElementById("food-name").innerText = selectedFood.food_name
-            document.getElementById("chef-food").src=selectedFood.image_url
-            document.getElementById("time").innerText=selectedFood.time
-
-            document.getElementById("recipe").innerHTML = selectedFood.food_recipe.length
-
-            let lihtml = "";
-            selectedFood.food_help.map(item => {
-                lihtml += `<li>${item}</li>`
-            })
-            
-            document.getElementById("recipe-food").innerHTML = lihtml
-            
-        } catch (error) {
-            
+                    let instructionsHtml = "";
+                    selectedFood.food_help.forEach(step => {
+                        instructionsHtml += `<li>${step}</li>`;
+                    });
+                    document.getElementById("recipe-instructions").innerHTML = instructionsHtml;
+                } else {
+                    console.error('Recipe not found');
+                    document.getElementById("food-name").innerText = "Recipe not found";
+                }
+            } catch (error) {
+                console.error('Error fetching recipe data:', error);
+            }
         }
-            
     }
-}
 
-const recipeFood = new RecipeFood();
-recipeFood.Init();
+    const recipeFood = new RecipeFood();
+    recipeFood.Init();
+});

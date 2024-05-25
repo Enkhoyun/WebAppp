@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,161 +9,63 @@
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/recipe.css">
     <link rel="stylesheet" type="text/css" href="/css/var.css">
-    <script type="module" src="/js/header&footer.js"></script> 
+    <script type="module" src="/js/header&footer.js"></script>
 </head>
 <body>
-   
     <my-header></my-header>
-
     <section>
         <div class="review">
-        <img class="profile" src="/assets/chef.jpeg" alt="Шефийн зураг">
-        <p >Энх-Оюун Хүрэлсүх</p>
-        
-        <p>2024.04.23</p>
-    </div>
-    <div class="food-name">
-        <h1 id="food-name">Амтат банш</h1>
-    
+            <img class="profile" src="/assets/chef.jpeg" alt="Шефийн зураг">
+            <p>Энх-Оюун Хүрэлсүх</p>
+            <p>2024.04.23</p>
         </div>
-
-    <div class="comment-recipe">
-        <p>"This is a Rachel Ray recipe I had in my file for quite awhile, and had to try it recently to satisfy a
-            craving. It turned out really well. I used made from scratch biscuit recipe as I couldn't locate the jiffy
-            mix in my area, I made about 6 biscuits. Also, I think the refrigerated biscuits would work as well.
-            Otherwise I followed the recipe pretty much exactly."</p>
-        <img id="chef-food" src="">
-        <div class="information">
-            <p><i class="fa-solid fa-hourglass" ></i> <i> бэлэн болох:<p id="time"> </p>
-
-            </i></p>
-            <p><i class="fa-solid fa-check" ></i> Орц:<p id="recipe"></p>
-            <p><i>Порц</i><p id="ports"><p></p>
-            
+        <div class="food-name">
+            <h1 id="food-name">Амтат банш</h1>
         </div>
-    </div>
+        <div class="comment-recipe">
+            <p></p>
+            <img id="chef-food" src="">
+            <div class="information">
+                <p><i class="fa-solid fa-hourglass"></i> <i> бэлэн болох: <span id="time"></span></i></p>
+                <p><i class="fa-solid fa-check"></i> Орц: <span id="recipe"></span></p>
+                <p><i>Порц:</i> <span id="ports"></span></p>
+            </div>
+        </div>
     </section>
     <br>
-    
     <div class="column-2">
         <div class="zaavar">
             <h3>Заавар</h3>
-        
-            <ol id="recipe-food">
-
-                </ol>
-            
-            
-          
+            <ol id="recipe-instructions"></ol>
         </div>
         <div class="orts">
             <h3>Орц</h3>
-            <ol>
-                <li>Салад навч – 100гр</li>
-                <li>Ногоон сонгино</li>
-                <li>Парсли</li>
-                <li>Өргөст хэмх – 1 ш</li>
-                <li>Бяслаг – 50 гр</li>
-                <li>Хушга (сонголтоор) – ¼</li>
-                <li>Aяга Үзэм - ¼ аяга</li>
-                <li>Мандарин – 1ш</li>
-                <li>Оливын тос – 1 х.х</li>
-                <li>Балзамик венигэр – 1 х.х</li>
-                <li>Давс, перц амтлахаар Нунтаг сармис – ¼ц.х</li>
-                <li>Базилик - ¼ ц.х</li>
-                <li>Сахар – 1 ц.х</li>
-            </ol>
-            
-            
+            <ol id="recipe-ingredients"></ol>
         </div>
-
     </div>
     <div class="video">
         <p><b>Бичлэг үзэх</b></p>
         <iframe width="654" height="497" src="https://www.youtube.com/embed/ECanzDT7dmo" title="The Royal Heartaches • 6x6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
- 
     <br>
-    <section class="comment-section">
-        <h3>Асуулт Сэтгэгдэл</h3>
-        <div class="comment">
-        <img src="/assets/star.png" alt="zurag">
-        <input type="text" id="comment" placeholder="Сэтгэгдэл бичих">
-        <button>Нэвтрэх</button>
-    
-        <section>
+    <kmn-comment-section post_id="123"></kmn-comment-section>
+    <footer>
+        <h2>Хоолондоо</h2>
+        <div class="footer">
+            <section class="footer1">
+                <h3>Холбоо барих</h3>
+                <p><i class="fa-solid fa-phone"> </i> +976 99228817</p>
+                <p><i class="fa-regular fa-envelope"></i> enkhoyun0901@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i>Улаанбаатар хот</p>
+            </section>
+            <section class="footer2">
+                <h3>Тусламж & Мэдээлэл</h3>
+                <p>Түгээмэл асуулт хариулт</p>
+                <p>Зар суртчилгаа</p>
+                <p>Сайтийн тухай</p>
+            </section>
         </div>
-        <div class="user-comment">
-            <img src="/assets/star.png" >
-            <icon class="leaf1"></icon>
-            <icon class="leaf2"></icon>
-            <icon class="leaf3"></icon>
-            <icon class="leaf4"></icon>
-            <icon class="leaf5"></icon>
-
-
-            <p>Гайхалтай гоё амттай болсон гэхдээ илүү час хийсэн амттай болгохыг хүслээ мөн болох хугацааг илүү
-                уртасгавал илүү зөөлөн амттай болж байна <i>Дэлгэрэнгүй</i></p>
-            <div class="reply">
-            <p>Энх-Оюун</p>
-            <p><i class="fa-regular fa-heart" style="color: #c31313;"></i>Reply</p>
-        </div>
-
-        </div>
-    </div>
-    <div class="user-comment">
-        <img src="/assets/star.png" >
-        <icon class="leaf1"></icon>
-        <icon class="leaf2"></icon>
-        <icon class="leaf3"></icon>
-        <icon class="leaf4"></icon>
-        <icon class="leaf5"></icon>
-
-
-        <p>Гайхалтай гоё амттай болсон гэхдээ илүү час хийсэн амттай болгохыг хүслээ мөн болох хугацааг илүү
-            уртасгавал илүү зөөлөн амттай болж байна <i>Дэлгэрэнгүй</i></p>
-            <div class="reply">
-                <p>Энх-Оюун</p>
-                <p><i class="fa-regular fa-heart" style="color: #c31313;"></i>Reply</p>
-            </div>
-
-        </section>
-    </section>
-    <section class="author">
-        <h3><b>Зохиогч</b></h3>
-        <div class="photo">
-        <img src="/assets/chef.jpeg" alt="chef">
-        <p> 5 дагагч</p>
-        <p>5 жор</p>
-    </div>
-        <p>Хүрэлсүх Энх-Оюун</p>
-        <a href="/html/author.html"><i>Нүүр хуудсыг үзэх</i></a>
-    </section>
-
-
-</main>
-<footer>
-
-    <h2>Хоолондоо</h2>
-    <div class="footer">
-        <section class="footer1">
-
-            <h3>Холбоо барих</h3>
-
-            <p><i class="fa-solid fa-phone"> </i> +976 99228817</p>
-            <p><i class="fa-regular fa-envelope"></i> enkhoyun0901@gmail.com</p>
-            <p><i class="fa-solid fa-location-dot"></i>Улаанбаатар хот</p>
-        </section>
-        <section class="footer2">
-            <h3>Тусламж & Мэдээлэл</h3>
-            <p>Түгээмэл асуулт хариулт</p>
-            <p>Зар суртчилгаа</p>
-            <p>Сайтийн тухай</p>
-        </section>
-    </div>
-
-</footer>
-<script src="../js/recipe.js"></script>
+    </footer>
+    <script src="../js/recipe.js"></script>
 </body>
-
 </html>

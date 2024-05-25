@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,61 +9,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/choosefood.css">
-      <link rel="stylesheet" type="text/css" href="/css/var.css">
+    <link rel="stylesheet" type="text/css" href="/css/var.css">
     <script type="module" src="../components/my-like.js"></script>
     <script type="module" src="../components/mySave.js"></script>
     <script type="module" src="/js/save.js"></script>
-    <script type="module" src="/js/header&footer.js"></script>
 </head>
+
 <body>
- <my-header></my-header>
-<main>
-    <save-element></save-element>
-    <section>
-        <h3>Хайлт:</h3>
-        <article id="searched-food-article">
-        </article>
-    </section>
-    <section>
-        <h3>Хамгийн хурдан хоол</h3>
-        <article id="fastest-food-container">
-        </article>
-    </section>
-    <section>
-        <h3>Нэгдүгээр хоол</h3>
-        <article id="first-food-container">
-        </article>
+    <header class="head">
+        <ul class="navigation">
+            <li><a href="index.html"><img src="/assets/logo.jpeg" alt="Logo" class="logo"></a></li>
+            <li><a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
+            <li><a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
+            <li class="search-bar">
+                <input type="text" id="search" placeholder="Search" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="quantity-icon"><i class="fa-regular fa-bookmark"><span class="quantity">0</span></i></li>
+            <li><a href="login.html" class="login"><i class="fa-solid fa-user"></i><p>Нэвтрэх</p></a></li>
+        </ul>
+    </header>
+    <main>
+        <save-element></save-element>
+        <section>
+            <h3>Хайлт:</h3>
+            <article id="searched-food-article"></article>
         </section>
-    <section>
-        <h3>Хоёр дугаар хоол</h3>
-        <article id="second-food-container">
-        </article>
+        <section>
+            <h3>Хамгийн хурдан хоол</h3>
+            <article id="fastest-food-container"></article>
         </section>
-</main>
-<footer>
-
-    <h2>Хоолондоо</h2>
-    <div class="footer">
-        <section class="footer1">
-
-            <h3>Холбоо барих</h3>
-
-            <p><i class="fa-solid fa-phone"> </i> +976 99228817</p>
-            <p><i class="fa-regular fa-envelope"></i> enkhoyun0901@gmail.com</p>
-            <p><i class="fa-solid fa-location-dot"></i>Улаанбаатар хот</p>
+        <section>
+            <h3>Нэгдүгээр хоол</h3>
+            <article id="first-food-container"></article>
         </section>
-        <section class="footer2">
-            <h3>Тусламж & Мэдээлэл</h3>
-            <p>Түгээмэл асуулт хариулт</p>
-            <p>Зар суртчилгаа</p>
-            <p>Сайтийн тухай</p>
+        <section>
+            <h3>Хоёр дугаар хоол</h3>
+            <article id="second-food-container"></article>
         </section>
-    </div>
+    </main>
+    <footer>
+        <h2>Хоолондоо</h2>
+        <div class="footer">
+            <section class="footer1">
+                <h3>Холбоо барих</h3>
+                <p><i class="fa-solid fa-phone"> +976 99228817</i></p>
+                <p><i class="fa-regular fa-envelope"></i> enkhoyun0901@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i>Улаанбаатар хот</p>
+            </section>
+            <section class="footer2">
+                <h3>Тусламж & Мэдээлэл</h3>
+                <p>Түгээмэл асуулт хариулт</p>
+                <p>Зар суртчилгаа</p>
+                <p>Сайтийн тухай</p>
+            </section>
+        </div>
+    </footer>
+    <script src="/js/Choosenfoods.js"></script>
+    <script type="module" src="/components/food-preview.js"></script>
+    <script>
+        document.querySelector('.quantity-icon').addEventListener('click', () => {
+            const saveCard = document.querySelector('save-element').shadowRoot.querySelector('.card');
+            saveCard.classList.toggle('active');
+        });
 
-</footer>
-<script src="/js/Choosenfoods.js"></script>
-<script type="module" src="/components/food-preview.js"></script>
+        function saveFood(food_id) {
+            const saveElement = document.querySelector('save-element');
+            saveElement.savedFood(food_id);
+        }
+    </script>
 </body>
-
-
 </html>

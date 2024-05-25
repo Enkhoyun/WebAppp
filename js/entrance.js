@@ -1,7 +1,10 @@
-const entranceName = document.querySelector(".entranceName");
-const options = document.querySelector(".options");
+document.addEventListener('DOMContentLoaded', function () {
+    const entranceNames = document.querySelectorAll('.entranceName');
 
-entranceName.addEventListener("click", () => {
-    options.classList.toggle("active");
+    entranceNames.forEach(entrance => {
+        entrance.addEventListener('click', function () {
+            const options = this.nextElementSibling;
+            options.classList.toggle('active');
+        });
+    });
 });
-

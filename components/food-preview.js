@@ -49,9 +49,11 @@ class FoodPreview extends window.HTMLElement {
         <a href="foodrecipe.html?id=${food.food_id}">
                 <p class="name">${food.food_name}</p>
                 <img src=${food.image_url} alt="Food photo">
+                <div class="row">
                 <my-like count="36">
                 </a>
                 <my-save f_id=${food.food_id}></my-save>
+                </div>
 
             </div>
         `

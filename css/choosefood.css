@@ -65,6 +65,12 @@ section {
         align-self: center;
     }
 
+} 
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem 0;
 }
 
 

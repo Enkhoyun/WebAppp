@@ -3,10 +3,14 @@ body {
 }
 
 .container {
-  display: flex;
-  max-width: 200px;
-  width: 200px;
-  left: 0;
+  
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; 
+  grid-gap: 20px; 
 }
 
 .column {
@@ -14,96 +18,78 @@ body {
   position: relative;
   border-radius: 10px;
   transition: 0.2s;
-  align-items: center;
-  display: flex; 
-  flex-direction: column; 
-}
-
-.column .options {
-  gap: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .entranceName {
   display: flex;
-  flex-direction: row;
-  gap: 0.2rem;
+  align-items: center;
+  cursor: pointer;
 }
 
 .entranceName img {
-  width: 20px;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.2rem;
 }
+
+.entranceName label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  font-size: 22px;
+  width: 100px;
+}
+
 
 .options {
   display: none;
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
 }
 
 .options.active {
   display: block;
 }
 
-.entranceName label {
-  display: flex;
-  height: 25px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
-  font-size: 22px;
-  width: 100px;
-  align-items: center;
-  cursor: pointer;
-  justify-content: space-between;
-}
-
 ul {
-  list-style: none; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.search-food {
+.footer {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
 }
 
-.search-ent {
-  width: 200px;
-  height: 30px;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+.footer section {
+  flex: 1;
 }
 
-.hoolig-shuuh {
-  margin-top: 30px;
-  text-align: center;
-  align-items: center;
-  height: 60px;
-  width: 150px;
-  background-color: #3a3131;
-  color: white;
-}
-.save-element-hidden {
-  display: none;
-}
-
-.save-element-visible {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: calc(100% - 500px);
-  width: 500px;
-  background-color: #453E3B;
-  height: 100vh;
-  transition: 0.5s;
-}
-
-.save-element-visible .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.footer h2,
+.footer h3 {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
   main {
-    padding: 0 20px;
+      padding: 0 20px;
+  }
+
+  .container {
+      flex-direction: column;
+      align-items: center;
   }
 }
-
+#filter-button{
+  border:1px solid black;
+  border-radius: 10px;
+}

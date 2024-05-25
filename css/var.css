@@ -1,117 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700&display=swap');
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-*{
+* {
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-*.dark-mode{
-    background-color: var(--color-main-bg-dark);
-    /* background-color: white; */
-    color: var(--color-primary-text-light) !important;  
+:root {
+    --font-header: 'Montserrat', sans-serif;
+    --font-answer: 'Pangolin', cursive;
+    --size-header: 20px;
+    --size-answer: 25px;
+    --font-addDescription: 'Istok Web', sans-serif;
+    --size-addDescription: 25px;
+    --color-home: white;
+    --color-foodname: #F7D8A5;
+    --color-general: white;
 
-    & header {
-        & nav {
-            background-color: var(--color-main-bg-dark);
-        }
-    }
+    --color-background: rgb(255, 255, 255);
+    --color-button: rgb(35, 50, 64);
+    --font-popular-title: 'Literata', serif;
 }
 
-body{
-    background-color: var(--color-main-bg);
-    margin: 0;
-    padding: 0;
-}
-/* 
-body.dark-mode {
-    background-color: var(--color-main-bg-dark);
-    color: var(--color-primary-text-light) !important;    
-} */
-
-body > header > nav.header-dark-mode {
-    background-color: var(--color-main-bg-dark);
-    color: var(--color-primary-text-light);
-}
-
-:root{
-    --color-main: #67B26F;
-    --color-yellow: #EAB142;
-    --color-red: #FF6B6B;
-    --color-blue: #2383DB;
-
-    --color-main-bg: #eef3f0;
-    --color-main-bg-dark: #14130F;
-    
-    --color-card-bg: #FFFFFF;
-
-    --color-agree: #3ccb81;
-    --color-disagree: #ff3d57;
-
-    --color-primary-text:rgba(0, 0, 0, 0.8);
-    --color-primary-text-light:rgba(255, 255, 255, 0.8);
-    --color-secondary-text: rgba(0, 37, 108, 0.60);
-
-    --fsize-b: 1.75em;
-    --fsize-m: 1.5em;
-    --fsize-s: 1.25em;
-    --fsize-xs: 1em;
-
-    --border-card: 1px solid rgb(0,0,0,0.10);
-    --border-rad: 15px;
-
-    --shadow-card: 0px 5px 10px rgba(0, 0, 0, 0.02);
-
-    --card-stroke: #00000026;
-    --card-background: #FFFFFF;
-    
-}
-
-
-button.green{
-    background-color: var(--color-main);
-    color: white;
-}
-
-button{
-    border: 0;
-    padding: 8px 15px;
-    font-size: 0.8em;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.4s ease-in;
-}
-
-button.green:hover{
-    box-shadow: 0px 5px 10px rgba(0, 164, 30, 0.4);;
-}
-
-.card{
-    background-color: var(--color-card-bg);
-    /* background-color: black; */
-    /* border: var(--border-card); */
-    border-radius: var(--border-rad);
-    margin-top: 1em;
-    box-shadow: var(--shadow-card);
-    width: 100%;
-}
-
-.card.dark-mode {
-    background-color: var(--color-main-bg-dark);
-}
-
-@media(max-width:768px){
-    button{
+@media (max-width: 768px) {
+    button {
         font-size: 0.9em;
         padding: 8px 10px;
     }
-    p{
+    p {
         font-size: 0.9em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-general: black;
     }
 }

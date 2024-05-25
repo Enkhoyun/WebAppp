@@ -14,6 +14,8 @@
     --font-addDescription: "Istok Web", sans-serif;
     --size-addDescription: 25px;
     --color-foodname: #F7D8A5;
+    --color-header:white;
+    --color-footer:#1A1F43;
     --font-popular-title: font-family: "Literata", serif;
 
 
@@ -48,6 +50,7 @@ a {
     max-width: 1440px;
     grid-area: head;
     margin: 0;
+    background-color:white;
     
 
     & .navigation {
@@ -123,7 +126,7 @@ margin-right: 5px;
 }
 
 footer {
-    background-color: #1F3341;
+    background-color:#0d1029;
     height:auto;
     padding: 10px 0 10px 0;
 }
@@ -166,3 +169,12 @@ gap: 5px;
 display: none;
   }
 }
+@media (prefers-color-scheme: dark) {
+    footer a{
+        
+            color: white;
+        }
+        .head {
+            background-color: #1A1F43;;
+
+}}

@@ -1,3 +1,4 @@
+
 class Save extends HTMLElement {
     constructor() {
         super();
@@ -53,11 +54,11 @@ class Save extends HTMLElement {
                     color: #fff;
                 }
 
-                .active .card {
+                .card.active {
                     left: calc(100% - 500px);
                 }
             </style>
-            <div class="card">
+            <div class="card ${this.foods.size ? 'active' : ''}">
                 <h1>Хадгалсан хоолнууд</h1>
                 <ul class="listCard">
                     ${Array.from(this.foods.values()).map(food_id => `
@@ -75,12 +76,17 @@ class Save extends HTMLElement {
     }
 
     savedFood(food_id) {
-        this.foods.set(food_id, food_id);
+        if (this.foods.has(food_id)) {
+            this.foods.delete(food_id);
+        } else {
+            this.foods.set(food_id, food_id);
+        }
         this.render();
+        document.querySelector('.quantity').textContent = this.foods.size;
     }
 
     closeCard() {
-        this.shadowRoot.querySelector('.card').style.left = '100%';
+        this.shadowRoot.querySelector('.card').classList.remove('active');
     }
 }
 

@@ -135,12 +135,12 @@ section {
     }
 
     .comment-section input::placeholder {
-        color: white;
+        color: var(--color-background);
     }
 
     & button {
-        background-color: black;
-        color: white;
+        background-color: var( --color-button);
+        color: var(--color-background);
         width: 100px;
         border-radius: 20px;
     }
@@ -150,7 +150,7 @@ section {
 .user-comment {
     border: solid none;
     gap: 3rem;
-    background-color: rgb(217, 217, 217);
+    background-color: var(--color-background);
     border-radius: 20px;
 
     & img {

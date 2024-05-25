@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,23 +11,23 @@
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/var.css">
     <link rel="stylesheet" type="text/css" href="/css/entrance.css">
-    <script type="module" src="/js/header&footer.js"></script> 
+    <script type="module" src="/js/header&footer.js"></script>
     <script type="module" src="/js/save.js"></script>
+    <script type="module" src="/components/food-preview.js"></script>
 </head>
-<body>
-   
-    <my-header></my-header>
 
-    <main>
-        <my-save></my-save>
+<body>
+    <my-header></my-header>
+    <my-save></my-save>
+    <div class="grid-container">
         <div class="container">
             <div class="column">
                 <div class="entranceName">
-                    <img src="/assets/meat.jpeg"><label>Мах <i class="fa-solid fa-chevron-down"></i></label>
+                    <img src="/assets/meat.jpeg" alt="meat">
+                    <label>Мах <i class="fa-solid fa-chevron-down"></i></label>
                 </div>
-
                 <ul class="options">
-                    <li class="option" ><label><input type="checkbox">Үхэр</label></li>
+                    <li class="option"><label><input type="checkbox">Үхэр</label></li>
                     <li class="option"><label><input type="checkbox">Адуу</label></li>
                     <li class="option"><label><input type="checkbox">Хонь</label></li>
                     <li class="option"><label><input type="checkbox">Ямаа</label></li>
@@ -40,29 +39,67 @@
                     <li class="option"><label><input type="checkbox">Тэмээ</label></li>
                 </ul>
             </div>
+            <div class="column">
+                <div class="entranceName">
+                    <img src="/assets/fruit.jpeg" alt="fruit">
+                    <label>Жимс <i class="fa-solid fa-chevron-down"></i></label>
+                </div>
+                <ul class="options">
+                    <li class="option"><label><input type="checkbox">Алим</label></li>
+                    <li class="option"><label><input type="checkbox">Банана</label></li>
+                    <li class="option"><label><input type="checkbox">Үсэн Үзэм</label></li>
+                    <li class="option"><label><input type="checkbox">Тарвас</label></li>
+                    <li class="option"><label><input type="checkbox">Интоор</label></li>
+                    <li class="option"><label><input type="checkbox">Лийр</label></li>
+                    <li class="option"><label><input type="checkbox">Нэрс</label></li>
+                    <li class="option"><label><input type="checkbox">Аньс</label></li>
+                    <li class="option"><label><input type="checkbox">Гүзээлзгэнэ</label></li>
+                    <li class="option"><label><input type="checkbox">Киви</label></li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="entranceName">
+                    <img src="/assets/ramensoup.jpeg" alt="ramen soup">
+                    <label>Гоймон <i class="fa-solid fa-chevron-down"></i></label>
+                </div>
+                <ul class="options">
+                    <li class="option"><label><input type="checkbox">Мушгиа гоймон</label></li>
+                    <li class="option"><label><input type="checkbox">Лазайна гоймон</label></li>
+                    <li class="option"><label><input type="checkbox">Паста гоймон</label></li>
+                    <li class="option"><label><input type="checkbox">Нарийн гоймон</label></li>
+                </ul>
+            </div>
+            <button id="filter-button">Хайх</button>
         </div>
-    </main>
+        <div class="food-filter">
+
+            <div id="food-previews">
+                <food-preview food_id="1"></food-preview>
+               
+            </div>
+        </div>
+    </div>
 
     <footer>
         <h2>Хоолондоо</h2>
         <div class="footer">
             <section class="footer1">
                 <h3>Холбоо барих</h3>
-                <p><i class="fa-solid fa-phone"> </i> +976 99228817</p>
+                <p><i class="fa-solid fa-phone"></i> +976 99228817</p>
                 <p><i class="fa-regular fa-envelope"></i> enkhoyun0901@gmail.com</p>
-                <p><i class="fa-solid fa-location-dot"></i>Улаанбаатар хот</p>
+                <p><i class="fa-solid fa-location-dot"></i> Улаанбаатар хот</p>
             </section>
             <section class="footer2">
                 <h3>Тусламж & Мэдээлэл</h3>
                 <p>Түгээмэл асуулт хариулт</p>
-                <p>Зар суртчилгаа</p>
+                <p>Зар сурталчилгаа</p>
                 <p>Сайтийн тухай</p>
             </section>
         </div>
     </footer>
 
     <script src="/js/entrance.js"></script>
-
+    <script src="/js/filter.js"></script> <!-- Add this line for the filter script -->
 </body>
 
 </html>
