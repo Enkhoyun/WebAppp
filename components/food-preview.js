@@ -33,7 +33,6 @@ class FoodPreview extends window.HTMLElement {
             
             .name {
                 padding-top: 9px;
-               
                 border: 1px;
                 border-radius: 30px;
                 width: 100%;
@@ -50,7 +49,7 @@ class FoodPreview extends window.HTMLElement {
                 <p class="name">${food.food_name}</p>
                 <img src=${food.image_url} alt="Food photo">
                 <div class="row">
-                <my-like count="36">
+                <my-like count="${food.like}">
                 </a>
                 <my-save f_id=${food.food_id}></my-save>
                 </div>

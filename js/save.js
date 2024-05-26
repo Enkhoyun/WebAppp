@@ -1,4 +1,3 @@
-
 class Save extends HTMLElement {
     constructor() {
         super();
@@ -15,19 +14,28 @@ class Save extends HTMLElement {
                     top: 0;
                     left: 100%;
                     width: 500px;
-                    background-color: #453E3B;
+                    background-color: rgb(14,16,41);
                     height: 100vh;
                     transition: 0.5s;
+                    overflow: hidden;
                 }
 
                 .card h1 {
-                    color: #E8BC0E;
+                    color: white;
                     font-weight: 100;
                     margin: 0;
                     padding: 0 20px;
                     height: 80px;
                     display: flex;
                     align-items: center;
+                }
+
+                .listCard {
+                    overflow-y: auto;
+                    height: calc(100vh - 150px); /* Adjusted height to leave space for header and footer */
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
                 }
 
                 .card .checkout {
@@ -39,7 +47,7 @@ class Save extends HTMLElement {
                 }
 
                 .card .checkout div {
-                    background-color: #E8BC0E;
+                    background-color: rgb(247,216,165);
                     width: 100%;
                     height: 70px;
                     display: flex;
@@ -50,8 +58,8 @@ class Save extends HTMLElement {
                 }
 
                 .card .checkout div:nth-child(2) {
-                    background-color: #1C1F25;
-                    color: #fff;
+                    background-color: white;
+                    color: black;
                 }
 
                 .card.active {
@@ -90,4 +98,38 @@ class Save extends HTMLElement {
     }
 }
 
+class mySave extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        this.bookmarked = false;
+        this.food_id = this.getAttribute("f_id");
+        this.render();
+        this.addEventListener('click', this.toggleBookmark.bind(this));
+    }
+
+    render() {
+        this.shadowRoot.innerHTML = `
+            <div class="save">
+                <i class="${this.bookmarked ? 'fa-solid' : 'fa-regular'} fa-bookmark"></i>
+            </div>
+        `;
+    }
+
+    toggleBookmark() {
+        this.bookmarked = !this.bookmarked;
+        this.render();
+        const saveNav = document.querySelector("save-element");
+        if (saveNav) {
+            saveNav.savedFood(this.food_id);
+            setCookie("bookmarked_food", this.food_id, 30); 
+        }
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+}
+
 customElements.define("save-element", Save);
+customElements.define("my-save", mySave);

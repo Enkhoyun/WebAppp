@@ -12,22 +12,35 @@
     <script type="module" src="/js/header&footer.js"></script>
 </head>
 <body>
-    <my-header></my-header>
+    <header class="head">
+        <ul class="navigation">
+            <li><a href="index.html"><img src="/assets/logo.jpeg" alt="Logo" class="logo"></a></li>
+            <li><a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
+            <li><a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
+            <li class="search-bar">
+                <input type="text" id="search" placeholder="Search" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="quantity-icon"><i class="fa-regular fa-bookmark"><span class="quantity">0</span></i></li>
+            <li><a href="login.html" class="login"><i class="fa-solid fa-user"></i><p>Нэвтрэх</p></a></li>
+        </ul>
+    </header>
     <section>
+        <main>
         <div class="review">
             <img class="profile" src="/assets/chef.jpeg" alt="Шефийн зураг">
             <p>Энх-Оюун Хүрэлсүх</p>
             <p>2024.04.23</p>
         </div>
         <div class="food-name">
-            <h1 id="food-name">Амтат банш</h1>
+            <h1 id="food-name"></h1>
         </div>
         <div class="comment-recipe">
-            <p></p>
-            <img id="chef-food" src="">
+            <span id="comment-recipe"></span>
+            <img id="chef-food" class="chef-food" src="">
             <div class="information">
-                <p><i class="fa-solid fa-hourglass"></i> <i> бэлэн болох: <span id="time"></span></i></p>
-                <p><i class="fa-solid fa-check"></i> Орц: <span id="recipe"></span></p>
+                <p><i class="fas fa-hourglass"></i> <i> бэлэн болох: <span id="time"></span></i></p>
+                <p><i class="fas fa-check"></i> Орц: <span id="recipe-count"></span></p>
                 <p><i>Порц:</i> <span id="ports"></span></p>
             </div>
         </div>
@@ -43,20 +56,20 @@
             <ol id="recipe-ingredients"></ol>
         </div>
     </div>
-    <div class="video">
+    <!-- <div class="video">
         <p><b>Бичлэг үзэх</b></p>
-        <iframe width="654" height="497" src="https://www.youtube.com/embed/ECanzDT7dmo" title="The Royal Heartaches • 6x6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+        <iframe width="654" height="497" src="https://www.youtube.com/embed/ECanzDT7dmo" title="The Royal Heartaches • 6x6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> -->
     <br>
-    <kmn-comment-section post_id="123"></kmn-comment-section>
+</main>
     <footer>
         <h2>Хоолондоо</h2>
         <div class="footer">
             <section class="footer1">
                 <h3>Холбоо барих</h3>
-                <p><i class="fa-solid fa-phone"> </i> +976 99228817</p>
-                <p><i class="fa-regular fa-envelope"></i> enkhoyun0901@gmail.com</p>
-                <p><i class="fa-solid fa-location-dot"></i>Улаанбаатар хот</p>
+                <p><i class="fas fa-phone"></i> +976 99228817</p>
+                <p><i class="far fa-envelope"></i> enkhoyun0901@gmail.com</p>
+                <p><i class="fas fa-location-dot"></i>Улаанбаатар хот</p>
             </section>
             <section class="footer2">
                 <h3>Тусламж & Мэдээлэл</h3>

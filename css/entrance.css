@@ -62,7 +62,9 @@ ul {
   padding: 0;
   margin: 0;
 }
-
+footer{
+  margin-top: 350px;
+}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -89,7 +91,14 @@ ul {
       align-items: center;
   }
 }
-#filter-button{
-  border:1px solid black;
-  border-radius: 10px;
+.submit{
+  background-color: #1F3341;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 30px;
 }

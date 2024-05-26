@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,34 +11,44 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/var.css">
     <script type="module" src="/components/my-like.js"></script>
-    <script type="module" src="/components/save.js"></script>
-    <script type="module" src="/js/header&footer.js">
+    <script type="module" src="/js/save.js"></script>
+    <script type="module" src="/js/header&footer.js"></script>
+    <script type="module" src="/components/food-preview.js"></script>
+    <script type="module" src="/components/mySave.js"></script>
 
-    </script>
 </head>
-<body>
-    <my-header></my-header>
-        
 
+<body>
+    <header class="head">
+        <ul class="navigation">
+            <li><a href="index.html"><img src="/assets/logo.jpeg" alt="Logo" class="logo"></a></li>
+            <li><a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
+            <li><a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
+            <li class="search-bar">
+                <input type="text" id="search" placeholder="Search" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="quantity-icon"><i class="fa-regular fa-bookmark"><span class="quantity">0</span></i></li>
+            <li><a href="login.html" class="login"><i class="fa-solid fa-user"></i><p>Нэвтрэх</p></a></li>
+        </ul>
+    </header>
 
     <main>
         <section class="general">
             <p class="ask">Та өөрийн дуртай хоолоо хийж сурмаар байна уу?</p>
             <div class="yesorno">
-                <a class="yes">Тийм   <i class="fa-solid fa-angle-down"></i></a>
-                    <div class="yeshover">
-                        <a href="/html/choosenfood.html">Хоол сонгох</a>
-                        <a href="/html/choosenentrance.html">Орц сонгох</a>
-                    </div>
-
-
+                <a class="yes">Тийм <i class="fa-solid fa-angle-down"></i></a>
+                <div class="yeshover">
+                    <a href="/html/choosenfood.html">Хоол сонгох</a>
+                    <a href="/html/choosenentrance.html">Орц сонгох</a>
+                </div>
             </div>
             <div class="yesorno">
-                <a class="no">Үгүй   <i class="fa-solid fa-angle-down"></i></a>
-                    <a href="/html/choosenfood.html" class="no-answer">Хамгийн амархан хоолийг туршиж үзэх </a>
+                <a class="no">Үгүй <i class="fa-solid fa-angle-down"></i></a>
+                <a href="/html/choosenfood.html" class="no-answer">Хамгийн амархан хоолийг туршиж үзэх </a>
             </div>
         </section>
-
+       
         <section class="add">
             <img src="/assets/add.jpeg" alt="advertisement">
             <div class="adddesc">

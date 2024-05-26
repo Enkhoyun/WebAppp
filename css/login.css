@@ -54,7 +54,7 @@
     
     }
 
-    & button {
+    & .submit {
         height: 45px;
         width: 370px;
         background-color:var( --color-button);

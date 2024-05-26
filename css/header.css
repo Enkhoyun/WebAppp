@@ -43,8 +43,6 @@ a {
     
 }
 
-
-/*header section*/
 .head {
     width:100%;
     max-width: 1440px;
@@ -174,7 +172,14 @@ display: none;
         
             color: white;
         }
-        .head {
-            background-color: #1A1F43;;
 
-}}
+    .head{
+        background-color: black;
+    .navigation li a{
+        color:white;
+
+    }}
+    .quantity-icon i.fa-bookmark {
+        color: white;
+}
+}

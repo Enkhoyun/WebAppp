@@ -11,21 +11,20 @@ class Header extends HTMLElement {
                 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
                 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pangolin&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Zetta:wght@100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 
+                :host {
+                    display: block;
+                    width: 100%;
+                }
+
                 :root {
                     --font-header: "Semi-bold";
                     --font-answer: "Pangolin", cursive;
                     --font-addDescription: "Istok Web", sans-serif;
                     --color-foodname: #F7D8A5;
-                }
-
-                body {
-                    display: grid;
-                    grid-template-columns: auto;
-                    grid-template-rows: auto;
-                    grid-template-areas: "head" "main" "footer";
-                    max-width: 1440px;
-                    min-width: 375px;
-                    margin: 0;
+                    --color-text-light: #0000;
+                    --color-text-dark: #fff;
+                    --color-background-light: #fff;
+                    --color-background-dark: #000;
                 }
 
                 * {
@@ -41,11 +40,12 @@ class Header extends HTMLElement {
                 .head {
                     width: 100%;
                     max-width: 1440px;
-                    grid-area: head;
                     margin: 0;
+                    background-color: var(--color-background-light);
+                    color: var(--color-text-light);
                 }
 
-                .head .navigation {
+                .navigation {
                     display: flex;
                     flex-direction: row;
                     list-style: none;
@@ -54,28 +54,28 @@ class Header extends HTMLElement {
                     font-family: var(--font-header);
                 }
 
-                .head .navigation .fa-user {
+                .fa-user {
                     font-size: 20px;
                 }
 
-                .head .navigation img {
+                .navigation img {
                     width: 40px;
                     height: 40px;
                 }
 
-                .head .navigation a {
+                .navigation a {
                     display: flex;
                     flex-direction: row;
                     gap: 1rem;
-                    color: black;
+                    color: var(--color-text-light);
                 }
 
-                .fa-regular .fa-bookmark {
+                .fa-bookmark {
                     position: relative;
                 }
 
-               .quantity{
-                font-size:8px;
+                .quantity {
+                    font-size: 8px;
                     background-color: red;
                     border-radius: 50%;
                     display: flex;
@@ -83,8 +83,8 @@ class Header extends HTMLElement {
                     align-items: center;
                     color: #fff;
                     position: absolute;
-                    top:2px;
-                    right:25%;
+                    top: 2px;
+                    right: 25%;
                     padding: 3px 5px;
                 }
 
@@ -96,12 +96,13 @@ class Header extends HTMLElement {
                     width: 100%;
                     max-width: 280px;
                     height: 25px;
-                    border: 1px solid black;
+                    border: 1px solid var(--color-text-light);
                     border-radius: 20px;
                 }
 
-                .search-bar ::placeholder {
+                .search::placeholder {
                     text-align: center;
+                    color: var(--color-text-light);
                 }
 
                 .fa-magnifying-glass {
@@ -110,6 +111,7 @@ class Header extends HTMLElement {
                     right: 0;
                     margin-top: 6px;
                     margin-right: 5px;
+                    color: var(--color-text-light);
                 }
 
                 .navigation li:not(:first-child) {
@@ -117,8 +119,31 @@ class Header extends HTMLElement {
                 }
 
                 @media (max-width: 500px) {
-                    .head .navigation li a p {
+                    .navigation li a p {
                         display: none;
+                    }
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    .head {
+                        background-color: var(--color-background-dark);
+                        color: var(--color-text-dark);
+                    }
+                    
+                    .navigation a {
+                        color: var(--color-text-dark);
+                    }
+                    
+                    .search {
+                        border: 1px solid var(--color-text-dark);
+                    }
+                    
+                    .search::placeholder {
+                        color: var(--color-text-dark);
+                    }
+
+                    .fa-magnifying-glass {
+                        color: var(--color-text-dark);
                     }
                 }
             </style>
@@ -138,6 +163,5 @@ class Header extends HTMLElement {
         `;
     }
 }
-
 
 customElements.define("my-header", Header);

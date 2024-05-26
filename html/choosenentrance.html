@@ -17,26 +17,40 @@
 </head>
 
 <body>
-    <my-header></my-header>
+    <header class="head">
+        <ul class="navigation">
+            <li><a href="index.html"><img src="/assets/logo.jpeg" alt="Logo" class="logo"></a></li>
+            <li><a href="choosenfood.html" class="choosenfood">Хоол сонгох</a></li>
+            <li><a href="choosenentrance.html" class="choosenetrance">Орц сонгох</a></li>
+            <li class="search-bar">
+                <input type="text" id="search" placeholder="Search" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="quantity-icon"><i class="fa-regular fa-bookmark"><span class="quantity">0</span></i></li>
+            <li><a href="login.html" class="login"><i class="fa-solid fa-user"></i><p>Нэвтрэх</p></a></li>
+        </ul>
+    </header>
     <my-save></my-save>
+    <main>
     <div class="grid-container">
         <div class="container">
+            <form>
             <div class="column">
                 <div class="entranceName">
                     <img src="/assets/meat.jpeg" alt="meat">
                     <label>Мах <i class="fa-solid fa-chevron-down"></i></label>
                 </div>
                 <ul class="options">
-                    <li class="option"><label><input type="checkbox">Үхрийн мах</label></li>
-                    <li class="option"><label><input type="checkbox">Адууны мах</label></li>
-                    <li class="option"><label><input type="checkbox">Хонины мах</label></li>
-                    <li class="option"><label><input type="checkbox">Ямааны мах</label></li>
-                    <li class="option"><label><input type="checkbox">Гахайны мах</label></li>
-                    <li class="option"><label><input type="checkbox">Тахианы мах</label></li>
-                    <li class="option"><label><input type="checkbox">Туна</label></li>
-                    <li class="option"><label><input type="checkbox">Сам хорхой</label></li>
-                    <li class="option"><label><input type="checkbox">Хавч</label></li>
-                    <li class="option"><label><input type="checkbox">Тэмээ</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat1" >Үхрийн мах</label></li>
+                    <li class="option"><label><input type="checkbox"  name="category" value="meat2">Адууны мах</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat3">Хонины мах</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat4">Ямааны мах</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat5">Гахайны мах</label></li>
+                    <li class="option"><label><input type="checkbox"name="category"  value="meat6">Тахианы мах</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat7">Туна</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat8">Сам хорхой</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat9">Хавч</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="meat10">Тэмээ</label></li>
                 </ul>
             </div>
             <div class="column">
@@ -75,25 +89,28 @@
                     <label>Ногоо <i class="fa-solid fa-chevron-down"></i></label>
                 </div>
                 <ul class="options">
-                    <li class="option"><label><input type="checkbox">Төмс</label></li>
-                    <li class="option"><label><input type="checkbox">Лууван</label></li>
-                    <li class="option"><label><input type="checkbox">Улаан лооль</label></li>
-                    <li class="option"><label><input type="checkbox">Өргөст хэмх</label></li>
-                    <li class="option"><label><input type="checkbox">Манжин</label></li>
-                    <li class="option"><label><input type="checkbox">Мөөг</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="potato">Төмс</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="carrot">Лууван</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="tomato">Улаан лооль</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="cucumber">Өргөст хэмх</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="manjin">Манжин</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="mushroom">Мөөг</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="onion">сонгино</label></li>
+                    <li class="option"><label><input type="checkbox" name="category" value="hash">Хаш</label></li>
                 </ul>
-            </div>
-            <button id="filter-button">Хайх</button>
-        </div>
-        <div class="food-filter">
 
-            <div id="food-previews">
-                <food-preview food_id="1"></food-preview>
+            </div>
+            <input type="submit" class="submit"></input>
+        </form>
+        </div>
+        <div class="food-filter" id="food-filter">
+
+            
                
             </div>
         </div>
     </div>
-
+</main>
     <footer>
         <h2>Хоолондоо</h2>
         <div class="footer">
@@ -113,7 +130,7 @@
     </footer>
 
     <script src="/js/entrance.js"></script>
-    <script src="/js/filter.js"></script> <!-- Add this line for the filter script -->
+    <script type="module" src="/js/filter.js"></script>
 </body>
 
 </html>
